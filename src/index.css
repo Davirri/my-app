@@ -1,0 +1,98 @@
+body {
+  font-family: cursive;
+  scroll-behavior: smooth;
+}
+
+.section-one-reverse-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+.section-one-text,
+.section-one-reverse-text,
+.hero-text {
+  margin: 5rem;
+  transition: transform 0.4s ease, color 0.4s ease, background-color 0.4s ease;
+  padding: 1rem;
+
+}
+
+.section-one-text:hover,
+.section-one-reverse-text:hover,
+.hero-text:hover {
+  transform: scale(1.2) rotate(5deg); 
+  background-color: rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 1rem;
+  animation: color ease-in 1s alternate infinite;
+}
+
+.section,
+.section-hero,
+.up {
+  display: flex;
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.box:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  animation: pulse 1s alternate infinite ; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 50px gray;
+  }
+  100% {
+    transform: scale(1.1); 
+    box-shadow: 0 0 50px black;
+
+  }
+}
+
+.section-one-content,
+.hero-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.animation1 {
+  animation: scaleRotate 1s alternate infinite;
+}
+@keyframes scaleRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  
+  50% {
+    transform: scale(1.5) rotate(10deg);
+  }
+  
+  100% {
+    transform: scale(1) rotate(0deg); 
+  }
+}
+@keyframes color{
+  0%{box-shadow: 0 0 50px white;
+  color: white;}
+  100%{
+    box-shadow: 0 0 50px cyan;
+    color: cyan;
+  }
+}
